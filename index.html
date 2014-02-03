@@ -1,0 +1,74 @@
+<!doctype html>
+  <head>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="src/lib/jquery-min.js"></script>
+    <script src="src/lib/jquery-ui.js"></script>
+    <script src="src/lib/underscore.js"></script>
+    <script src="src/lib/backbone.js"></script>
+    <script src="src/lib/backbone.localstorage.js"></script>
+    <script src="src/application.js"></script>
+
+  </head>
+  <body>
+  <div id='ordertaker'>
+    <center>
+      <div id='app-name'>
+        <h1>Ordertaker</h1>
+      </div>
+    </center>
+    <div class='content'>
+      <div id='add-order'>
+        <input id='new-order' placeholder="Add New Order" type='text' />
+      </div>
+      <div id="customers">
+        <ul id="customer-list"></ul>
+        <div id="new-customer-item" class="customer-item">
+          <input id='new-customer' placeholder='Add Customer' type='text' />
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="backup-note">
+      Note: Ordertaker (for now) uses local storage, which means it stores all of your data in your browser. <a href="#" id="data-backup">Back it up</a>.
+    </div>
+  </div>
+  <div id="footer">
+    Proudly crafted by <a href="http://www.robbiemarcelo.com">Robbie Marcelo</a>, powered by <a href='http://www.proudcloud.net'>@proudcloud</a>
+  </div>
+
+    <script type="text/template" id="order-template">
+      <div class="order">
+        <div class="display">
+          <span class="order-text"></span>
+          <span class="order-paid">
+            <span class="paid"></span>
+          </span>
+          <span class="order-destroy"></span>
+        </div>
+        <div class="edit">
+          <input class="order-input" type="text" value="" />
+        </div>
+      </div>
+    </script>
+
+     <script type="text/template" id="customer-template">
+      <div class="customer">
+        <div class="display">
+          <span class="customer-name"></span>
+          <span class="editing-name">
+            <input class="customer-input" type="text" value="" />
+          </span>
+          <span class="customer-destroy"></span>
+          <ul class="customer-orders">
+          </ul>
+        </div>
+        <div class="edit">
+        </div>
+      </div>
+    </script>
+
+    <script type="text/javascript">
+      // Google analytics here
+    </script>
+  </body>
+  </html>
