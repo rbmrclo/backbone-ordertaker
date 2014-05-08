@@ -1,4 +1,4 @@
-# BackboneOrdertaker
+# Ordertaker-BB
 
   A simple Ordertaker app using backbone.js
 
